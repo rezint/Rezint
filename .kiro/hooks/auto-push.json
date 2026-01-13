@@ -1,0 +1,13 @@
+{
+  "name": "Auto Push to GitHub",
+  "description": "Automatically commit and push changes to GitHub on every file save",
+  "trigger": {
+    "type": "onFileSave",
+    "filePattern": "**/*"
+  },
+  "action": {
+    "type": "executeCommand",
+    "command": "git add . && git commit -m \"Auto-save: Updated files\" && git push origin main"
+  },
+  "enabled": true
+}
